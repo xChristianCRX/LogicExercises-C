@@ -1,0 +1,12 @@
+int main() {
+    float raio;
+    float diametro;
+    float area;
+
+    printf("Digite o valor do raio do círculo: ");
+    scanf("%f", &raio);
+
+    diametro = raio * 2;
+
+    return 1;
+}
