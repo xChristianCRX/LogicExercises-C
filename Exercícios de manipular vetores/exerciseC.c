@@ -1,4 +1,5 @@
 #include <stdio.h>
+// insere no final do vetor
 
 int append(int * vet, int max, int* size, int element){
     if(*size >= max){

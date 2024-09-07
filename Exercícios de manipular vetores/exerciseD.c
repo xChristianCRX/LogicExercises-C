@@ -1,9 +1,10 @@
 #include <stdio.h>
+// insere um determinado elemento na posição i do vetor
 
 int insert(int * vet, int * size, int max, int element, int posicao){
     if(*size >= max){
         printf("Vetor cheio.\n");
-        return 0;
+        return 0; 
     }else{
         (*size)++;
         for(int i = *size; i >= posicao; i--){
