@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int N;
+    int *A, *B, *C;
+
+    scanf("%d", &N);
+
+    A = (int *)malloc(N * sizeof(int));
+    B = (int *)malloc(N * sizeof(int));
+    C = (int *)malloc(2 * N * sizeof(int));
+    if (A == NULL || B == NULL || C == NULL) {
+        printf("Erro ao alocar memória.\n");
+        return 1;
+    }
+
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &A[i]);
+    }
+
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &B[i]);
+    }
+
+    for (int i = 0; i < N; i++) {
+        C[2 * i] = A[i];
+        C[2 * i + 1] = B[i];
+    }
+
+    for (int i = 0; i < 2 * N; i++) {
+        printf("%d ", C[i]);
+    }
+    free(A);
+    free(B);
+    free(C);
+
+    return 0;
+}
